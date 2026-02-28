@@ -1,10 +1,37 @@
-# Python bytecode
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Compiled extensions
-*.so
-*.pyd
-*.dll
-*.dylib
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+*.cover
+coverage.xml
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
