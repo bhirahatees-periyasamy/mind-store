@@ -3,16 +3,16 @@ syntax = "proto3";
 package vault;
 
 service VaultService {
-    rpc HealthService (HealthRequest) returns (HealthResponse);
-    rpc SearchService (SearchRequest) returns (SearchResponse);
-    rpc IndexService (IndexRequest) returns (IndexResponse);
+    rpc Health (HealthRequest) returns (HealthResponse);
+    rpc Search (SearchRequest) returns (SearchResponse);
+    rpc Index (IndexRequest) returns (IndexResponse);
 }
 
 message HealthRequest {
 }
 
 message HealthResponse {
-    string status = 1;
+    bool status = 1;
 }
 
 message SearchRequest {
@@ -36,7 +36,7 @@ message IndexRequest {
 }
 
 message IndexResponse {
-  string status = 1;
+  bool status = 1;
 }
 
 

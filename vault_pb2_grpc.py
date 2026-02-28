@@ -34,18 +34,18 @@ class VaultServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.HealthService = channel.unary_unary(
-                '/vault.VaultService/HealthService',
+        self.Health = channel.unary_unary(
+                '/vault.VaultService/Health',
                 request_serializer=vault__pb2.HealthRequest.SerializeToString,
                 response_deserializer=vault__pb2.HealthResponse.FromString,
                 _registered_method=True)
-        self.SearchService = channel.unary_unary(
-                '/vault.VaultService/SearchService',
+        self.Search = channel.unary_unary(
+                '/vault.VaultService/Search',
                 request_serializer=vault__pb2.SearchRequest.SerializeToString,
                 response_deserializer=vault__pb2.SearchResponse.FromString,
                 _registered_method=True)
-        self.IndexService = channel.unary_unary(
-                '/vault.VaultService/IndexService',
+        self.Index = channel.unary_unary(
+                '/vault.VaultService/Index',
                 request_serializer=vault__pb2.IndexRequest.SerializeToString,
                 response_deserializer=vault__pb2.IndexResponse.FromString,
                 _registered_method=True)
@@ -54,19 +54,19 @@ class VaultServiceStub(object):
 class VaultServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def HealthService(self, request, context):
+    def Health(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def SearchService(self, request, context):
+    def Search(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def IndexService(self, request, context):
+    def Index(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -75,18 +75,18 @@ class VaultServiceServicer(object):
 
 def add_VaultServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'HealthService': grpc.unary_unary_rpc_method_handler(
-                    servicer.HealthService,
+            'Health': grpc.unary_unary_rpc_method_handler(
+                    servicer.Health,
                     request_deserializer=vault__pb2.HealthRequest.FromString,
                     response_serializer=vault__pb2.HealthResponse.SerializeToString,
             ),
-            'SearchService': grpc.unary_unary_rpc_method_handler(
-                    servicer.SearchService,
+            'Search': grpc.unary_unary_rpc_method_handler(
+                    servicer.Search,
                     request_deserializer=vault__pb2.SearchRequest.FromString,
                     response_serializer=vault__pb2.SearchResponse.SerializeToString,
             ),
-            'IndexService': grpc.unary_unary_rpc_method_handler(
-                    servicer.IndexService,
+            'Index': grpc.unary_unary_rpc_method_handler(
+                    servicer.Index,
                     request_deserializer=vault__pb2.IndexRequest.FromString,
                     response_serializer=vault__pb2.IndexResponse.SerializeToString,
             ),
@@ -102,7 +102,7 @@ class VaultService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def HealthService(request,
+    def Health(request,
             target,
             options=(),
             channel_credentials=None,
@@ -115,7 +115,7 @@ class VaultService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/vault.VaultService/HealthService',
+            '/vault.VaultService/Health',
             vault__pb2.HealthRequest.SerializeToString,
             vault__pb2.HealthResponse.FromString,
             options,
@@ -129,7 +129,7 @@ class VaultService(object):
             _registered_method=True)
 
     @staticmethod
-    def SearchService(request,
+    def Search(request,
             target,
             options=(),
             channel_credentials=None,
@@ -142,7 +142,7 @@ class VaultService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/vault.VaultService/SearchService',
+            '/vault.VaultService/Search',
             vault__pb2.SearchRequest.SerializeToString,
             vault__pb2.SearchResponse.FromString,
             options,
@@ -156,7 +156,7 @@ class VaultService(object):
             _registered_method=True)
 
     @staticmethod
-    def IndexService(request,
+    def Index(request,
             target,
             options=(),
             channel_credentials=None,
@@ -169,7 +169,7 @@ class VaultService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/vault.VaultService/IndexService',
+            '/vault.VaultService/Index',
             vault__pb2.IndexRequest.SerializeToString,
             vault__pb2.IndexResponse.FromString,
             options,

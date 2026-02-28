@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0bvault.proto\x12\x05vault\"\x0f\n\rHealthRequest\" \n\x0eHealthResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\")\n\rSearchRequest\x12\r\n\x05query\x18\x01 \x01(\t\x12\t\n\x01k\x18\x02 \x01(\x05\"<\n\x0cSearchResult\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\"6\n\x0eSearchResponse\x12$\n\x07results\x18\x01 \x03(\x0b\x32\x13.vault.SearchResult\"\x1c\n\x0cIndexRequest\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1f\n\rIndexResponse\x12\x0e\n\x06status\x18\x01 \x01(\t2\xc5\x01\n\x0cVaultService\x12<\n\rHealthService\x12\x14.vault.HealthRequest\x1a\x15.vault.HealthResponse\x12<\n\rSearchService\x12\x14.vault.SearchRequest\x1a\x15.vault.SearchResponse\x12\x39\n\x0cIndexService\x12\x13.vault.IndexRequest\x1a\x14.vault.IndexResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0bvault.proto\x12\x05vault\"\x0f\n\rHealthRequest\" \n\x0eHealthResponse\x12\x0e\n\x06status\x18\x01 \x01(\x08\")\n\rSearchRequest\x12\r\n\x05query\x18\x01 \x01(\t\x12\t\n\x01k\x18\x02 \x01(\x05\"<\n\x0cSearchResult\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\"6\n\x0eSearchResponse\x12$\n\x07results\x18\x01 \x03(\x0b\x32\x13.vault.SearchResult\"\x1c\n\x0cIndexRequest\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1f\n\rIndexResponse\x12\x0e\n\x06status\x18\x01 \x01(\x08\x32\xb0\x01\n\x0cVaultService\x12\x35\n\x06Health\x12\x14.vault.HealthRequest\x1a\x15.vault.HealthResponse\x12\x35\n\x06Search\x12\x14.vault.SearchRequest\x1a\x15.vault.SearchResponse\x12\x32\n\x05Index\x12\x13.vault.IndexRequest\x1a\x14.vault.IndexResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -46,5 +46,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_INDEXRESPONSE']._serialized_start=264
   _globals['_INDEXRESPONSE']._serialized_end=295
   _globals['_VAULTSERVICE']._serialized_start=298
-  _globals['_VAULTSERVICE']._serialized_end=495
+  _globals['_VAULTSERVICE']._serialized_end=474
 # @@protoc_insertion_point(module_scope)
