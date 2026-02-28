@@ -1,17 +1,17 @@
-# 🧠 MindStore — Semantic Memory Microservice
+# 🧠 Vault — Semantic Memory Microservice
 
 ## 📌 Overview
 
-**MindStore** is the semantic memory microservice of the CargoMind system.
+**Vault** is the semantic memory microservice of the CargoMind system.
 It is responsible for ingesting repositories, generating embeddings, indexing knowledge, and providing retrieval capabilities that enable CargoMind to reason across large codebases.
 
-MindStore follows a **retrieval-augmented memory architecture**, separating knowledge storage from execution logic to improve scalability, modularity, and experimentation.
+Vault follows a **retrieval-augmented memory architecture**, separating knowledge storage from execution logic to improve scalability, modularity, and experimentation.
 
 ---
 
 ## 🎯 Objectives
 
-MindStore aims to provide:
+Vault aims to provide:
 
 * Repository-scale semantic memory
 * Fast contextual retrieval
@@ -22,7 +22,7 @@ MindStore aims to provide:
 ---
 ## Folder Structure
 ```
-mindstore/
+Vault/
 │
 ├── README.md
 ├── pyproject.toml
@@ -94,10 +94,10 @@ Repository → Loader → Chunker → Embedder → Vector Store → Retrieval AP
 ### System interaction
 
 ```
-CargoMind → MindStore API → Retrieval → Vector DB → Context returned
+CargoMind → Vault API → Retrieval → Vector DB → Context returned
 ```
 
-MindStore does not perform reasoning or execution; it serves as a knowledge layer.
+Vault does not perform reasoning or execution; it serves as a knowledge layer.
 
 ---
 
@@ -314,7 +314,7 @@ Responsibilities:
 
 ### Separation of concerns
 
-MindStore does not perform reasoning or planning.
+Vault does not perform reasoning or planning.
 
 ### Provider abstraction
 
@@ -371,7 +371,7 @@ New ingestion strategies and retrieval algorithms should be addable without brea
 
 ## 🏁 MVP Definition
 
-MindStore is considered MVP-complete when:
+Vault is considered MVP-complete when:
 
 * repository indexing works end-to-end
 * embeddings are generated
@@ -383,7 +383,7 @@ MindStore is considered MVP-complete when:
 
 ## 📖 System Role Summary
 
-MindStore acts as the semantic memory substrate of CargoMind, enabling repository-scale understanding by transforming raw code into structured, retrievable knowledge.
+Vault acts as the semantic memory substrate of CargoMind, enabling repository-scale understanding by transforming raw code into structured, retrievable knowledge.
 
 It provides the contextual foundation required for autonomous coding agents to reason beyond immediate context windows.
 
