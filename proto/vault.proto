@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package vault;
+
+service VaultService {
+    rpc Health (HealthRequest) returns (HealthResponse);
+    rpc Search (SearchRequest) returns (SearchResponse);
+    rpc Index (IndexRequest) returns (IndexResponse);
+}
+
+message HealthRequest {
+}
+
+message HealthResponse {
+    bool status = 1;
+}
+
+message SearchRequest {
+    string query = 1;
+    int32 k = 2;
+}
+
+message SearchResult {
+    string content = 1;
+    string path = 2;
+    float score = 3;
+}
+
+message SearchResponse {
+  repeated SearchResult results = 1;
+}
+
+
+message IndexRequest {
+  string path = 1;
+}
+
+message IndexResponse {
+  bool status = 1;
+}
+
+
